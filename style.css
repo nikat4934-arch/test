@@ -23,7 +23,6 @@ body {
 }
 
 
-
 a {
     color: white;
     text-decoration: none;
@@ -33,14 +32,44 @@ ul {
     list-style: none;
 }
 
+.container {
+    max-width: 1140px;
+    margin: 0 auto; /*разброс марджина равномерно между лево-права, а 0 чтоб игнорить вверх-вниз :D*/
+    padding: 0 15px; /*дабы оотступ оставался после уменьшения*/
+}
+
 .btn {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    width: 165px;
+    height: 56px;
+
+    background-color: RED;
+    border-radius: 5px;
+
+
+    transition: opacity 0.3s; /*Время реакции*/
+}
+
+.btn:hover {
+    opacity: 0.8; /*Прозрачность при наведении*/
 }
 
 /*Шапка*/
 
 .header {
-    display: flex; /*друг за дружкой, по ширенке*/
+    padding: 25px 0;
+}
+
+
+.header .container {
+    display: flex;/*друг за дружкой, по ширенке*/
     justify-content: space-between; /*Распределение между каждым элементом*/
     align-items: center; /*вещи внутри тож по центру*/
 }
@@ -52,10 +81,15 @@ ul {
 .header_nav a {
     font-size: 14px;
     opacity: 0.7; /*Прозрачность*/
+    transition: opacity 0.3s;
 }
 
 .header_nav a.active {
     opacity: 1;
+}
+
+.header_nav a:hover {
+    opacity: 0.9; /*Прозрачность*/
 }
 
 .header_list {
