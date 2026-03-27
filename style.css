@@ -32,6 +32,10 @@ ul {
     list-style: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto; /*разброс марджина равномерно между лево-права, а 0 чтоб игнорить вверх-вниз :D*/
@@ -65,6 +69,9 @@ ul {
 
 .header {
     padding: 25px 0;
+    
+    position: relative; /*На мало ли, дабы шапка не пропала*/
+    z-index: 10;
 }
 
 
@@ -97,6 +104,34 @@ ul {
     gap: 30px; /*Расстояние между элементами?*/
 }
 
+/*Приветственная секция*/
+.welcome {
+    margin-top: -112px; /*Перебив фоном*/
+    padding: 250px 0; /*Внутренний отступ(от края до внутрненнего содержимого)*/
+    
+    background-image: url("images/welcum.JPG");
+    background-repeat: no-repeat;
+    background-size: cover; /*На всю ширину*/
+    background-position: center;
+}
 
+.welcome__text {
+    width: 550px;
+}
 
+.welcome__subtitle {
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
 
+.welcome__title {
+    font-size: 58px;
+}
+
+.welcome__desc {
+    margin: 20px 0;
+    font-size: 18px;
+    opacity: 0.7;
+}
