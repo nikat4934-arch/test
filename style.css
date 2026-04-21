@@ -42,7 +42,9 @@ img {
 }
 
 .container {
-    max-width: 1140px;
+    box-sizing: border-box; /*ДЛя включения паддингов в макс. ширину*/
+
+    max-width: 1170px;
     margin: 0 auto; /*разброс марджина равномерно между лево-права, а 0 чтоб игнорить вверх-вниз :D*/
     padding: 0 15px; /*дабы оотступ оставался после уменьшения*/
 }
@@ -188,3 +190,59 @@ img {
     opacity: 0.7;
 }
 
+/*Order*/
+.order {
+    background-color: #514d4d;
+    padding: 60px 0;
+}
+
+.order .container {
+    display: flex;
+    justify-content: space-between; /*Между право-лево*/
+    align-items: center; /*Между вверхом-низом*/
+
+    padding-right: 90px;
+
+}
+
+.order__I {
+    width: 470px;
+}
+
+.order__text {
+    max-width: 360px;
+}
+
+.order__title {
+    margin-bottom: 25px;
+    font-size: 44px;
+}
+
+.ordeer__desc {
+    opacity: 0.7;
+}
+
+.order__price {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: rgb(255, 77, 0);
+}
+
+.order__old-price {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: rgb(255, 77, 0);
+
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.order__price + .order__price {
+    margin-left: 3px;
+}
+
+.order .btn {
+    margin-top: 10px;
+}
